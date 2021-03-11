@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ name }}</h1>
+    <p>{{ type }}</p>
+    <p>{{ pattern }}：{{ num }}</p>
+    <p>{{ comment }}</p>
+    <p>稀有度：{{ rare }}</p>
+    <p>
+    {% if equiped == 0 %}
+        {% if type == "武器" %}
+            <a href="/equip_weapon/{{ id }}">装备</a>
+        {% else %}
+            <a href="/equip_armor/{{ id }}">装备</a>
+        {% endif %}
+        <br>
+        <a href="/on/{{ id }}">出售</a>
+    {% else %}
+        {% if type == "武器" %}
+            <a href="{{ url_for('unequip_weapon') }}">卸下</a>
+        {% else %}
+            <a href="/unequip_armor/{{ id }}">卸下</a>
+        {% endif %}
+    {% endif %}
+    </p>
+{% endblock %}

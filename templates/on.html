@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action = "" method = "post">
+    <h1>出售</h1>
+    <p><input type="text" oninput="value=value.replace(/[^\d]/g,'')" required="required" placeholder="prize" name="prize"></p>
+    <p><input type ="submit" value ="出售"/></p>
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>木箱</h1>
+    {% if len ==0 %}
+        无
+    {% else %}
+        {% for key,value in item.items() %}
+        <a href="/equipment/{{ value }}">
+            {{ key }}
+        </a>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

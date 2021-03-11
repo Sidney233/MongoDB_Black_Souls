@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>灰烬大人{{ username }}</h1>
+    <p>您现在装备的武器：
+        {% if weapon_id!='0' %}
+        <a href="/equipment/{{ weapon_id }}">
+        {% endif %}
+        {{ weapon }}</a>
+    </p>
+    <p>您现在装备的护甲：
+        {% if len ==0 %}
+            无
+        {% else %}
+        {% for key,value in armor.items() %}
+        <a href="/equipment/{{ value }}">
+            {{ key }}
+        </a>
+        {% endfor %}
+        {% endif %}
+    <p>当前攻击力：{{ attack }}，当前防御力：{{ defense }}，当前金币：{{ gold }}</p>
+    <p>
+        <a href="{{ url_for('work') }}">出击</a><br>
+        <a href="{{ url_for('explore') }}">探索</a>
+    </p>
+    <p>注：攻击力越高每次出击会获得更多金币，防御力越高每次探索会获得更好的装备；<br>武器只能装备一件，护甲只能装备两件。</p>
+{% endblock %}

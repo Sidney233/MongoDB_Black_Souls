@@ -1,0 +1,34 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Black Souls</title>
+        {% else %}
+        <title>Black Souls</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            Black Souls:
+            <a href="{{ url_for('index') }}">主页</a>
+            {% if username==None %}
+                <a href="{{ url_for('login') }}">登录</a>
+                <a href="{{ url_for('register') }}">注册</a>
+            {% else %}
+                <a href="{{ url_for('logout') }}">登出</a>
+                <a href="{{ url_for('storage') }}">木箱</a>
+                <a href="{{ url_for('market') }}">市场</a>
+            {% endif %}
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

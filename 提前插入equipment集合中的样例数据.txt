@@ -1,0 +1,84 @@
+}
+        "name" : "专家服饰",
+        "type" : "armor",
+        "defense" : 1,
+        "owner_id" : "0",
+        "rare" : 1
+},
+{
+        "name" : "皮护甲",
+        "type" : "armor",
+        "defense" : 1,
+        "owner_id" : "0",
+        "rare" : 1
+},
+{
+        "name" : "锁子铠甲",
+        "type" : "armor",
+        "defense" : 5,
+        "owner_id" : "0",
+        "rare" : 2
+},
+{
+        "name" : "太阳战士铠甲",
+        "type" : "armor",
+        "defense" : 10,
+        "owner_id" : "0",
+        "rare" : 2
+},
+{
+        "name" : "太阳战士头盔",
+        "type" : "armor",
+        "defense" : 8,
+        "owner_id" : "0",
+        "rare" : 2
+},
+{
+        "name" : "法汉铠甲",
+        "type" : "armor",
+        "defense" : 12,
+        "owner_id" : "0",
+        "rare" : 3
+},
+{
+        "name" : "法汉头盔",
+        "type" : "armor",
+        "defense" : 10,
+        "owner_id" : "0",
+        "rare" : 3
+},
+{
+        "name" : "双手巨剑",
+        "type" : "weapon",
+        "attack" : 30,
+        "owner_id" : "0",
+        "rare" : 3
+},
+{
+        "name" : "月光大剑",
+        "type" : "weapon",
+        "attack" : 35,
+        "owner_id" : "0",
+        "rare" : 3
+},
+{
+        "name" : "晾衣长刀",
+        "type" : "weapon",
+        "attack" : 20,
+        "owner_id" : "0",
+        "rare" : 2
+},
+{
+        "name" : "黑骑士大斧",
+        "type" : "weapon",
+        "attack" : 40,
+        "owner_id" : "0",
+        "rare" : 4
+},
+{
+        "name" : "猎龙大斧",
+        "type" : "weapon",
+        "attack" : 50,
+        "owner_id" : "0",
+        "rare" : 5
+}

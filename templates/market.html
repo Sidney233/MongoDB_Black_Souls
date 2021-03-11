@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>市场</h1>
+    <table border="1">
+    <tr>
+        <th>装备名称</th>
+        <th>类型</th>
+        <th>攻击/防御力</th>
+        <th>卖家</th>
+        <th>稀有度</th>
+        <th>价格</th>
+    </tr>
+    {% for item in items %}
+    <tr>
+        {% for key,value in item.items() %}
+            {% if  key !='_id' %}
+            <td>{{ value }}</td>
+            {% endif %}
+        {% endfor %}
+        {% if item["owner_id"] == username %}
+            <td><a href="/off/{{ item["_id"] }}">下架</a></td>
+        {% else %}
+            <td><a href="/buy/{{ item["_id"] }}">购买</a></td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
